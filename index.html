@@ -1,0 +1,157 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<script src="js/jquery.min.js"></script>
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+		<script type="text/javascript" src="js/jquery.corner.js"></script> 
+		<script src="js/wow.min.js"></script>
+		<script>
+		 new WOW().init();
+		</script>
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="bg">
+		<div class="container">
+			<div id="home" class="header wow bounceInDown" data-wow-delay="0.4s">
+					<div class="top-header">
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li><a href="#about" class="scroll">关于NxT</a></li>
+								<li><a href="#team" class="scroll">团队成员</a></li>
+							</ul>
+							<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<div class="banner-info">
+				<div class="container">
+					<h1 class="wow fadeIn" data-wow-delay="0.5s"><span>we are</span><br /><label>Team NxT</label></h1>
+
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+			<div id="about" class="about">
+				<div class="head-section">
+					<div class="container">
+						<h3><span>关于</span><label>Team-NxT</label></h3>
+					</div>
+				</div>
+					<div class="about-grids">
+						<div class="col-md-4 about-grid about-grid1 wow fadeInLeft" data-wow-delay="0.4s">
+							<div class="about-grid-info">
+								<h4><a href="#">成立</a></h4>
+								<p>NxT团队于2014年底在三墩职业技术学院成立，现有团队6人，主要来自挖掘机系和烹饪系。</p>
+							</div>
+							<div class="about-grid-pic">
+							<img src="images/zju.jpg" title="name" />
+							</div>
+						</div>
+						<div class="col-md-4 about-grid about-grid2 wow fadeInUp" data-wow-delay="0.4s">
+							<div class="about-grid-pic">
+							<img src="images/work.jpg" title="name" />
+							</div>
+							<div class="about-grid-info">
+								<h4><a href="#">技能get√</a></h4>
+								<p>除了会用挖掘机炒菜之外，还学一些傍身技能糊口。本团队擅长Ai、Fw、Fl、Br、Ae、Pr、Id、Ps等软件的安装与卸载，精通CSS、JavaScript、PHP、ASP、C、C＋＋、C#、Java、Ruby、Perl、Lisp、python、Objective-C、ActionScript、Pascal等单词的拼写，熟悉Windows、Linux、Mac、Android、IOS、WP8等系统的开关机。</p>
+							</div>
+						</div>
+						<div class="col-md-4 about-grid about-grid1 wow fadeInRight" data-wow-delay="0.4s">
+							<div class="about-grid-info">
+								<h4><a href="#">U can U up</a></h4>
+								<p>长期承接帮小孩打架、代写作业、代开家长会、代人写情书等等</p>
+							</div>
+							<div class="about-grid-pic">
+							<img src="images/up.jpg" title="name" />
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<div id="team" class="team">
+				<div class="head-section">
+					<div class="container">
+						<h3><label>团队成员</label></h3>
+					</div>
+				</div>
+						<div class="sreen-gallery-cursual">
+							<link href="css/owl.carousel.css" rel="stylesheet">
+							    <script src="js/owl.carousel.js"></script>
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items : 3,
+							        lazyLoad : true,
+							        autoPlay : true,
+							        navigation : true,
+							        navigationText :  false,
+							        pagination : false,
+							      });
+							    });
+							    </script>
+						       <div id="owl-demo" class="owl-carousel text-center">
+					                <div class="item wow zoomIn" data-wow-delay="0.3s">
+					                	<img class="lazyOwl" data-src="images/tang.jpg" alt="name">
+					                	<h5><span>汤</span>嘉辉</h5>
+					                	<label>足球 音乐</label>
+					                </div>
+					                <div class="item wow zoomIn" data-wow-delay="0.3s">
+					                	<img class="lazyOwl" data-src="images/he.jpg" alt="name">
+					                	<h5><span>何</span>雅兵</h5>
+					                	<label>Html、CSS、JS</label>
+					                </div>
+					                <div class="item wow zoomIn" data-wow-delay="0.3s">
+					                	<img class="lazyOwl" data-src="images/chen.jpg" alt="name">
+					                	<h5><span>陈</span>津枝</h5>
+					                	<label>Linux、分布式存储</label>
+					                </div>
+					                <div class="item wow zoomIn" data-wow-delay="0.3s">
+					                	<img class="lazyOwl" data-src="images/jin.jpg" alt="name">
+					                	<h5><span>金</span>培元</h5>
+					                	<label>数据分析挖掘</label>
+					                </div>
+				              </div>
+						<!--//sreen-gallery-cursual---->
+			</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>
