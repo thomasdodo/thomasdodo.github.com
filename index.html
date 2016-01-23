@@ -1,157 +1,535 @@
-﻿<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Home</title>
-		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-		<script src="js/jquery.min.js"></script>
-		<link href="css/style.css" rel='stylesheet' type='text/css' />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		</script>
-		<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-		<script type="text/javascript" src="js/jquery.corner.js"></script> 
-		<script src="js/wow.min.js"></script>
-		<script>
-		 new WOW().init();
-		</script>
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
-		<script>
-			$(function() {
-				var pull 		= $('#pull');
-					menu 		= $('nav ul');
-					menuHeight	= menu.height();
-				$(pull).on('click', function(e) {
-					e.preventDefault();
-					menu.slideToggle();
-				});
-				$(window).resize(function(){
-	        		var w = $(window).width();
-	        		if(w > 320 && menu.is(':hidden')) {
-	        			menu.removeAttr('style');
-	        		}
-	    		});
-			});
-		</script>
-	</head>
-	<body>
-		<div class="bg">
-		<div class="container">
-			<div id="home" class="header wow bounceInDown" data-wow-delay="0.4s">
-					<div class="top-header">
-						 <nav class="top-nav">
-							<ul class="top-nav">
-								<li><a href="#about" class="scroll">关于NxT</a></li>
-								<li><a href="#team" class="scroll">团队成员</a></li>
-							</ul>
-							<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
-						</nav>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-			</div>
-			<div class="banner-info">
-				<div class="container">
-					<h1 class="wow fadeIn" data-wow-delay="0.5s"><span>we are</span><br /><label>Team NxT</label></h1>
+<!DOCTYPE html>
+<html class="gt-ie8 gt-ie9 not-ie">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>汽车大数据分析系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
+	<!-- Open Sans font from Google CDN -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
+
+	<!-- Pixel Admin's stylesheets -->
+	<link href="html/assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="html/assets/stylesheets/pixel-admin.min.css" rel="stylesheet" type="text/css">
+	<link href="html/assets/stylesheets/widgets.min.css" rel="stylesheet" type="text/css">
+	<link href="html/assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css">
+	<link href="html/assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body class="theme-adminflare main-menu-animated dont-animate-mm-content-sm animate-mm-md animate-mm-lg">
+
+<script>var init = [];</script>
+<!-- Demo script --> <script src="html/assets/demo/demo.js"></script> <!-- / Demo script -->
+
+<div id="main-wrapper">
+	<div id="main-navbar" class="navbar navbar-inverse" role="navigation">
+		<!-- Main menu toggle -->
+		<button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">HIDE MENU</span></button>
+		
+		<div class="navbar-inner">
+			<!-- Main navbar header -->
+			<div class="navbar-header">
+
+				<!-- Logo -->
+				<a href="index.html" class="navbar-brand" style="padding-right: 0px;padding-left: 0px;">
+					<div><img alt="Pixel Admin" src="html/assets/images/pixel-admin/main-navbar-logo.png"></div>
+					浙江图灵软件科技有限公司
+				</a>
+
+				<!-- Main navbar toggle -->
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+
+			</div> <!-- / .navbar-header -->
+
+			<div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+				<div>
+					<ul class="nav navbar-nav">	
+					</ul> <!-- / .navbar-nav -->
+
+					<div class="right clearfix">
+						<ul class="nav navbar-nav pull-right right-navbar-nav">
+							<li>
+								<form class="navbar-form pull-left">
+									<input type="text" class="form-control" placeholder="Search">
+								</form>
+							</li>
+						</ul> <!-- / .navbar-nav -->
+					</div> <!-- / .right -->
+				</div>
+			</div> <!-- / #main-navbar-collapse -->
+		</div> <!-- / .navbar-inner -->
+	</div> <!-- / #main-navbar -->
+	<div id="main-menu" role="navigation">
+		<div id="main-menu-inner">
+			<div class="menu-content top" id="menu-content-demo">
+				<div>
+					<div class="text-bg"><span style="font-size:13px">你好,图灵</span></div>
+
+					<img src="html/assets/demo/avatars/1.png" alt="" class="">
+					<div class="btn-group">
+						<a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-envelope"></i></a>
+						<a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-user"></i></a>
+						<a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-cog"></i></a>
+						<a href="#" class="btn btn-xs btn-danger btn-outline dark"><i class="fa fa-power-off"></i></a>
+					</div>
+					<a href="#" class="close">&times;</a>
 				</div>
 			</div>
-			<div class="clearfix"> </div>
+			<ul class="navigation">
+				<li>
+					<a href="index.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">首页</span></a>
+				</li>
+				<li class="mm-dropdown">
+					<a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">对比分析</span></a>
+<!-- 					<ul>
+						<li>
+							<a tabindex="-1" href="layouts-grid.html"><span class="mm-text">Grid</span></a>
+						</li>
+						<li>
+							<a tabindex="-1" href="layouts-main-menu.html"><i class="menu-icon fa fa-th-list"></i><span class="mm-text">Main menu</span><span class="label label-warning">Updated</span></a>
+						</li>
+					</ul> -->
+				</li>
+
+			</ul> <!-- / .navigation -->
+		</div> <!-- / #main-menu-inner -->
+	</div> <!-- / #main-menu -->
+<!-- /4. $MAIN_MENU -->
+
+	<div id="content-wrapper">
+		<ul class="breadcrumb breadcrumb-page">
+			<div class="breadcrumb-label text-light-gray">You are here: </div>
+			<li><a href="#">首页</a></li>
+		</ul>
+
+
+		<div id="echarts-maps">
+        <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+
+		    <div id="echarts-maps1" style="height:400px"></div>
+		    <script type="text/javascript">
+		        require.config({
+		            paths: {
+		                echarts: 'http://echarts.baidu.com/build/dist'
+		            }
+		        });
+		        require(
+		            [
+		                'echarts',
+		                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+		            ],
+		            function (ec) {
+		                // 基于准备好的dom，初始化echarts图表
+		                var myChart = ec.init(document.getElementById('echarts-maps1'), 'macarons'); 
+		                
+		                var option = {
+                                title: {
+                                    x: 'center',
+                                    text: '汽车品牌投诉数量统计(2013-2015)',
+                                    subtext: '投诉榜前20',
+                                },
+                                tooltip: {
+                                    trigger: 'item'
+                                },
+                                toolbox: {
+                                    show: false,
+                                    feature: {
+                                        dataView: {show: true, readOnly: false},
+                                        restore: {show: true},
+                                        saveAsImage: {show: true}
+                                    }
+                                },
+                                calculable: true,
+                                grid: {
+                                    borderWidth: 0,
+                                    y: 80,
+                                    y2: 60
+                                },
+                                xAxis: [
+                                    {
+                                        type: 'category',
+                                        show: false,
+                                        data: ['雪佛兰', '一汽大众', '别克', '长安福特', '东风标致', '上海大众', '东风雪铁龙', '东风日产', '长城', '长安乘用车', '斯柯达', '北京现代', '江淮', '比亚迪', '东风悦达起亚', '吉利汽车', '奇瑞', '广汽本田', '一汽-大众', '一汽丰田', ]
+                                    }
+                                ],
+                                yAxis: [
+                                    {
+                                        type: 'value',
+                                        show: false
+                                    }
+                                ],
+                                series: [
+                                    {
+                                        name: '投诉数量',
+                                        type: 'bar',
+                                        itemStyle: {
+                                            normal: {
+                                                color: function(params) {
+                                                    // build a color map as your need.
+                                                    var colorList = [
+                                                      '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                                                       '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                                       '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0',
+                                                        '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                                                       '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                                       '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                                                    ];
+                                                    return colorList[params.dataIndex]
+                                                },
+                                                label: {
+                                                    show: true,
+                                                    position: 'top',
+                                                    formatter: '{b}\n{c}'
+                                                }
+                                            }
+                                        },
+                                        data: [6744,6712,6038,5761,5613,5250,4518,3741,3186,3081,2494,2485,2165,1935,1730,1713,1703,1612,1394,1316],
+
+                                    }
+                                ]
+                            };
+                            myChart.setOption(option); 
+		            }
+		        );
+		    </script>
+
+            <div id="echarts-maps3" style="height:400px"></div>
+            <script type="text/javascript">
+                require.config({
+                    paths: {
+                        echarts: 'http://echarts.baidu.com/build/dist'
+                    }
+                });
+                require(
+                    [
+                        'echarts',
+                        'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+                    ],
+                    function (ec) {
+                        // 基于准备好的dom，初始化echarts图表
+                        var myChart = ec.init(document.getElementById('echarts-maps3'), 'macarons'); 
+                        
+                        var option = {
+                                title : {
+                                    text: '车型投诉数量统计',
+                                    subtext: '投诉榜前20'
+                                },
+                                tooltip : {
+                                    trigger: 'axis'
+                                },
+                                toolbox: {
+                                    show : false,
+                                    feature : {
+                                        mark : {show: true},
+                                        dataView : {show: true, readOnly: false},
+                                        magicType : {show: true, type: ['line', 'bar']},
+                                        restore : {show: true},
+                                        saveAsImage : {show: true}
+                                    }
+                                },
+                                calculable : true,
+                                xAxis : [
+                                    {
+                                        type : 'category',
+                                        data : ['速腾','福克斯','科鲁兹','标致408','世嘉','赛欧','凯越','途观','英朗','轩逸','标致308','迈腾','明锐','君越','迈锐宝','帕萨特','朗逸','蒙迪欧','和悦','君威','高尔夫','雪铁龙C4L',]
+                                    }
+                                ],
+                                yAxis : [
+                                    {
+                                        type : 'value'
+                                    }
+                                ],
+                                series : [
+                                    {
+                                        name:'投诉数量',
+                                        type:'bar',
+                                        data:[4153, 2974, 2628, 2545, 2482, 1774, 1671, 1630, 1611, 1484, 1470, 1447,
+                                              1411, 1285, 1252, 1224, 1204, 1135, 1111, 1066, 1014, 1009, 
+                                        ],
+                                        markPoint : {
+                                            data : [
+                                                {type : 'max', name: '最大值'},
+                                                {type : 'min', name: '最小值'}
+                                            ]
+                                        },
+ 
+                                    },
+                                ]
+                            };
+                            myChart.setOption(option); 
+                    }
+                );
+            </script>
+
+            <div id="echarts-maps4" style="height:400px"></div>
+            <script type="text/javascript">
+                require.config({
+                    paths: {
+                        echarts: 'http://echarts.baidu.com/build/dist'
+                    }
+                });
+                require(
+                    [
+                        'echarts',
+                        'echarts/chart/bar'
+                    ],
+                    function (ec) {
+                        var myChart = ec.init(document.getElementById('echarts-maps4'), 'macarons'); 
+                        
+                        var option = {
+                                title : {
+                                    text: '销量和投诉比例(2014-2015)',
+                                    subtext: '销量前10车型'
+                                },
+                                tooltip : {
+                                    trigger: 'axis',
+                                    axisPointer : {
+                                        type : 'shadow'
+                                    },
+                                    formatter: function (params){
+                                        return params[0].name + '<br/>'
+                                               + params[0].seriesName + ' : ' + params[0].value + '<br/>'
+                                               + params[1].seriesName + ' : ' + (params[1].value + params[0].value);
+                                    }
+                                },
+                                legend: {
+                                    selectedMode:false,
+                                    data:['销量', '投诉量']
+                                },
+                                toolbox: {
+                                    show : false,
+                                    feature : {
+                                        mark : {show: true},
+                                        dataView : {show: true, readOnly: false},
+                                        restore : {show: true},
+                                        saveAsImage : {show: true}
+                                    }
+                                },
+                                calculable : true,
+                                xAxis : [
+                                    {
+                                        type : 'category',
+                                        data : ['速腾','福克斯','科鲁兹','英朗','卡罗拉','轩逸','朗逸','捷达','桑塔纳','朗动']
+                                    }
+                                ],
+                                yAxis : [
+                                    {
+                                        type : 'value',
+                                        boundaryGap: [0, 0.1]
+                                    }
+                                ],
+                                series : [
+                                    {
+                                        name:'销量',
+                                        type:'bar',
+                                        stack: 'sum',
+                                        barCategoryGap: '50%',
+                                        itemStyle: {
+                                            normal: {
+                                                color: 'tomato',
+                                                barBorderColor: 'tomato',
+                                                barBorderWidth: 6,
+                                                barBorderRadius:0,
+                                                label : {
+                                                    show: true, position: 'insideTop'
+                                                }
+                                            }
+                                        },
+                                        data:[579987, 618308, 512088, 439530, 425788, 634187, 751068, 571932, 563268, 519385]
+                                    },
+                                    {
+                                        name:'投诉量',
+                                        type:'bar',
+                                        stack: 'sum',
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#000',
+                                                barBorderColor: 'tomato',
+                                                barBorderWidth: 6,
+                                                barBorderRadius:0,
+                                                label : {
+                                                    show: true, 
+                                                    position: 'top',
+                                                    formatter: function (params) {
+                                                        for (var i = 0, l = option.xAxis[0].data.length; i < l; i++) {
+                                                            if (option.xAxis[0].data[i] == params.name) {
+                                                                return option.series[0].data[i] + params.value;
+                                                            }
+                                                        }
+                                                    },
+                                                    textStyle: {
+                                                        color: 'tomato'
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        data:[4153, 2974, 2628, 1611, 568, 1484, 1204, 517, 503, 229,]
+                                    }
+                                ]
+                            };
+                            myChart.setOption(option); 
+                    }
+                );
+            </script>
+
+            <div id="echarts-maps5" style="height:400px;width:50%;float:left;"></div>
+            <div id="echarts-maps6" style="height:400px;width:50%;float:right;"></div>
+            <script type="text/javascript">
+                require.config({
+                    paths: {
+                        echarts: 'http://echarts.baidu.com/build/dist'
+                    }
+                });
+                require(
+                    [
+                        'echarts',
+                        'echarts/chart/bar', // 使用柱状图就加载bar模块，按需加载
+                        'echarts/chart/pie',
+                    ],
+                    function (ec) {
+                        // 基于准备好的dom，初始化echarts图表
+                        var myChart = ec.init(document.getElementById('echarts-maps5'), 'macarons'); 
+                        
+                        var option = {
+                        title : {
+                            text: '问题类型统计表',
+                            subtext: '投诉榜前10',
+                            x:'center'
+                        },
+                        tooltip : {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: {
+                            orient : 'vertical',
+                            x : 'left',
+                            data:['发动机','轮胎','车身附件及电器','变速器','前后桥及悬挂系统']
+                        },
+                        calculable : true,
+                        series : [
+                            {
+                                name:'访问来源',
+                                type:'pie',
+                                radius : '55%',
+                                center: ['50%', 225],
+                                data:[
+                                    {value:335, name:'发动机'},
+                                    {value:310, name:'轮胎'},
+                                    {value:234, name:'车身附件及电器'},
+                                    {value:135, name:'变速器'},
+                                    {value:1548, name:'前后桥及悬挂系统'}
+                                ]
+                            }
+                        ]
+                    };
+
+                    option2 = {
+                        tooltip : {
+                            trigger: 'axis',
+                            axisPointer : {
+                                type: 'shadow'
+                            }
+                        },
+                        legend: {
+                            data:['发动机','轮胎','车身附件及电器','变速器','前后桥及悬挂系统']
+                        },
+                        toolbox: {
+                            show : false,
+                            orient : 'vertical',
+                            y : 'center',
+                            feature : {
+                                mark : {show: true},
+                                magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                                restore : {show: true},
+                                saveAsImage : {show: true}
+                            }
+                        },
+                        calculable : true,
+                        xAxis : [
+                            {
+                                type : 'category',
+                                data : ['速腾','科鲁兹','轩逸','朗动','英朗','福克斯','朗逸']
+                            }
+                        ],
+                        yAxis : [
+                            {
+                                type : 'value',
+                                splitArea : {show : true}
+                            }
+                        ],
+                        grid: {
+                            x2:40
+                        },
+                        series : [
+                            {
+                                name:'发动机',
+                                type:'bar',
+                                stack: '总量',
+                                data:[320, 332, 301, 334, 390, 330, 320]
+                            },
+                            {
+                                name:'轮胎',
+                                type:'bar',
+                                stack: '总量',
+                                data:[120, 132, 101, 134, 90, 230, 210]
+                            },
+                            {
+                                name:'车身附件及电器',
+                                type:'bar',
+                                stack: '总量',
+                                data:[220, 182, 191, 234, 290, 330, 310]
+                            },
+                            {
+                                name:'变速器',
+                                type:'bar',
+                                stack: '总量',
+                                data:[150, 232, 201, 154, 190, 330, 410]
+                            },
+                            {
+                                name:'前后桥及悬挂系统',
+                                type:'bar',
+                                stack: '总量',
+                                data:[820, 932, 901, 934, 1290, 1330, 1320]
+                            }
+                        ]
+                    };
+
+
+                    myChart.setOption(option);
+
+                    myChart2 = ec.init(document.getElementById('echarts-maps6'), 'macarons');
+                    myChart2.setOption(option2);
+
+                    myChart.connect(myChart2);
+                    myChart2.connect(myChart);
+
+                    setTimeout(function (){
+                        window.onresize = function () {
+                            myChart.resize();
+                            myChart2.resize();
+                        }
+                    },200);
+                    }
+                );
+            </script>
+
 		</div>
-			<div id="about" class="about">
-				<div class="head-section">
-					<div class="container">
-						<h3><span>关于</span><label>Team-NxT</label></h3>
-					</div>
-				</div>
-					<div class="about-grids">
-						<div class="col-md-4 about-grid about-grid1 wow fadeInLeft" data-wow-delay="0.4s">
-							<div class="about-grid-info">
-								<h4><a href="#">成立</a></h4>
-								<p>NxT团队于2014年底在三墩职业技术学院成立，现有团队6人，主要来自挖掘机系和烹饪系。</p>
-							</div>
-							<div class="about-grid-pic">
-							<img src="images/zju.jpg" title="name" />
-							</div>
-						</div>
-						<div class="col-md-4 about-grid about-grid2 wow fadeInUp" data-wow-delay="0.4s">
-							<div class="about-grid-pic">
-							<img src="images/work.jpg" title="name" />
-							</div>
-							<div class="about-grid-info">
-								<h4><a href="#">技能get√</a></h4>
-								<p>除了会用挖掘机炒菜之外，还学一些傍身技能糊口。本团队擅长Ai、Fw、Fl、Br、Ae、Pr、Id、Ps等软件的安装与卸载，精通CSS、JavaScript、PHP、ASP、C、C＋＋、C#、Java、Ruby、Perl、Lisp、python、Objective-C、ActionScript、Pascal等单词的拼写，熟悉Windows、Linux、Mac、Android、IOS、WP8等系统的开关机。</p>
-							</div>
-						</div>
-						<div class="col-md-4 about-grid about-grid1 wow fadeInRight" data-wow-delay="0.4s">
-							<div class="about-grid-info">
-								<h4><a href="#">U can U up</a></h4>
-								<p>长期承接帮小孩打架、代写作业、代开家长会、代人写情书等等</p>
-							</div>
-							<div class="about-grid-pic">
-							<img src="images/up.jpg" title="name" />
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-			</div>
-			<div id="team" class="team">
-				<div class="head-section">
-					<div class="container">
-						<h3><label>团队成员</label></h3>
-					</div>
-				</div>
-						<div class="sreen-gallery-cursual">
-							<link href="css/owl.carousel.css" rel="stylesheet">
-							    <script src="js/owl.carousel.js"></script>
-							        <script>
-							    $(document).ready(function() {
-							      $("#owl-demo").owlCarousel({
-							        items : 3,
-							        lazyLoad : true,
-							        autoPlay : true,
-							        navigation : true,
-							        navigationText :  false,
-							        pagination : false,
-							      });
-							    });
-							    </script>
-						       <div id="owl-demo" class="owl-carousel text-center">
-					                <div class="item wow zoomIn" data-wow-delay="0.3s">
-					                	<img class="lazyOwl" data-src="images/tang.jpg" alt="name">
-					                	<h5><span>汤</span>嘉辉</h5>
-					                	<label>足球 音乐</label>
-					                </div>
-					                <div class="item wow zoomIn" data-wow-delay="0.3s">
-					                	<img class="lazyOwl" data-src="images/he.jpg" alt="name">
-					                	<h5><span>何</span>雅兵</h5>
-					                	<label>Html、CSS、JS</label>
-					                </div>
-					                <div class="item wow zoomIn" data-wow-delay="0.3s">
-					                	<img class="lazyOwl" data-src="images/chen.jpg" alt="name">
-					                	<h5><span>陈</span>津枝</h5>
-					                	<label>Linux、分布式存储</label>
-					                </div>
-					                <div class="item wow zoomIn" data-wow-delay="0.3s">
-					                	<img class="lazyOwl" data-src="images/jin.jpg" alt="name">
-					                	<h5><span>金</span>培元</h5>
-					                	<label>数据分析挖掘</label>
-					                </div>
-				              </div>
-						<!--//sreen-gallery-cursual---->
-			</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+
+
+
+	</div> <!-- / #content-wrapper -->
+	<div id="main-menu-bg"></div>
+</div> <!-- / #main-wrapper -->
+	<script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">'+"<"+"/script>"); </script>
+<script src="html/assets/javascripts/bootstrap.min.js"></script>
+<script src="html/assets/javascripts/pixel-admin.min.js"></script>
+
+<script type="text/javascript">
+	init.push(function () {
+	})
+	window.PixelAdmin.start(init);
+</script>
+
 </body>
 </html>
