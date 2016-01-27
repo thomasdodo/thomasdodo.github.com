@@ -103,11 +103,17 @@
 			<li><a href="#">首页</a></li>
 		</ul>
 
-
+        <span style="float:right;font-size:14px">注：图表数据为演示数据</span>
 		<div id="echarts-maps">
         <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
 
-		    <div id="echarts-maps1" style="height:400px"></div>
+            <div class="row">
+                <div id="echarts-maps1" style="height:400px"></div>
+                <span style="font-size:16px"><strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从统计结果看，投诉较多的品牌为雪佛兰、一汽大众、别克，当然也和该品牌销量大有关，投诉量较少的品牌为法拉利、玛莎拉蒂、阿斯顿马丁等豪华品牌。由于品牌较多，上图只显示投诉量前20品牌。
+                </strong></span>
+            <hr class="no-grid-gutter-h grid-gutter-margin-b no-margin-t">
+            </div>
 		    <script type="text/javascript">
 		        require.config({
 		            paths: {
@@ -194,7 +200,13 @@
 		        );
 		    </script>
 
+            <div class="row">
             <div id="echarts-maps3" style="height:400px"></div>
+            <span style="font-size:16px"><strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;速腾投诉量最高，达到了4153起，福克斯第二，共2974起，科鲁兹第三2628起。投诉较少的为林肯MKC、兰德酷路泽(进口)、保时捷911等豪华车型。上图为投诉量前20的车型。
+                </strong></span>
+            <hr class="no-grid-gutter-h grid-gutter-margin-b no-margin-t">
+            </div>
             <script type="text/javascript">
                 require.config({
                     paths: {
@@ -262,7 +274,13 @@
                 );
             </script>
 
+            <div class="row">
             <div id="echarts-maps4" style="height:400px"></div>
+            <span style="font-size:16px"><strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加上各款车型的销售量进行对比的话，以销售量前10的车型来统计，速腾的投诉比例最高，达到0.7%，投诉比例排第二的是福克斯0.4%。投诉比例最小的是0.1%。
+                </strong></span>
+            <hr class="no-grid-gutter-h grid-gutter-margin-b no-margin-t">
+            </div>
             <script type="text/javascript">
                 require.config({
                     paths: {
@@ -373,8 +391,14 @@
                 );
             </script>
 
+            <div class="row">
             <div id="echarts-maps5" style="height:400px;width:50%;float:left;"></div>
             <div id="echarts-maps6" style="height:400px;width:50%;float:right;"></div>
+            <span style="font-size:16px"><strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;123
+                </strong></span>
+            <hr class="no-grid-gutter-h grid-gutter-margin-b no-margin-t">
+            </div>
             <script type="text/javascript">
                 require.config({
                     paths: {
@@ -404,7 +428,7 @@
                         legend: {
                             orient : 'vertical',
                             x : 'left',
-                            data:['发动机','轮胎','车身附件及电器','变速器','前后桥及悬挂系统']
+                            data:['发动机','轮胎','其他','变速器','前后桥及悬挂系统','','']
                         },
                         calculable : true,
                         series : [
@@ -414,11 +438,11 @@
                                 radius : '55%',
                                 center: ['50%', 225],
                                 data:[
-                                    {value:335, name:'发动机'},
-                                    {value:310, name:'轮胎'},
-                                    {value:234, name:'车身附件及电器'},
-                                    {value:135, name:'变速器'},
-                                    {value:1548, name:'前后桥及悬挂系统'}
+                                    {value:4208, name:'发动机'},
+                                    {value:1538, name:'轮胎'},
+                                    {value:2128, name:'其他'},
+                                    {value:2260, name:'变速器'},
+                                    {value:2551, name:'前后桥及悬挂系统'}
                                 ]
                             }
                         ]
@@ -432,7 +456,7 @@
                             }
                         },
                         legend: {
-                            data:['发动机','轮胎','车身附件及电器','变速器','前后桥及悬挂系统']
+                            data:['发动机','轮胎','其他','变速器','前后桥及悬挂系统']
                         },
                         toolbox: {
                             show : false,
@@ -449,7 +473,7 @@
                         xAxis : [
                             {
                                 type : 'category',
-                                data : ['速腾','科鲁兹','轩逸','朗动','英朗','福克斯','朗逸']
+                                data : ['速腾','科鲁兹','轩逸','英朗','福克斯','朗逸']
                             }
                         ],
                         yAxis : [
@@ -466,31 +490,31 @@
                                 name:'发动机',
                                 type:'bar',
                                 stack: '总量',
-                                data:[320, 332, 301, 334, 390, 330, 320]
+                                data:[1253, 818, 520, 498, 798, 321]
                             },
                             {
                                 name:'轮胎',
                                 type:'bar',
                                 stack: '总量',
-                                data:[120, 132, 101, 134, 90, 230, 210]
+                                data:[516, 210, 168, 156, 365, 123]
                             },
                             {
-                                name:'车身附件及电器',
+                                name:'其他',
                                 type:'bar',
                                 stack: '总量',
-                                data:[220, 182, 191, 234, 290, 330, 310]
+                                data:[511, 310, 210, 253, 462, 382]
                             },
                             {
                                 name:'变速器',
                                 type:'bar',
                                 stack: '总量',
-                                data:[150, 232, 201, 154, 190, 330, 410]
+                                data:[972, 645, 260, 326, 752, 180]
                             },
                             {
                                 name:'前后桥及悬挂系统',
                                 type:'bar',
                                 stack: '总量',
-                                data:[820, 932, 901, 934, 1290, 1330, 1320]
+                                data:[701, 645, 326, 378, 597, 198]
                             }
                         ]
                     };
